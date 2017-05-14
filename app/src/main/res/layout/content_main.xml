@@ -1,20 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.android.zen.mobilehealthmonitor.MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_main"
+    tools:context="com.android.zen.mobilehealthmonitor.MainActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:paddingTop="80dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="13dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="32dp"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/greeneye"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="50dp" />
+
+            <ImageView
+                android:id="@+id/headImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ghead"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="50dp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/greeneye1"
+                tools:layout_editor_absoluteX="224dp"
+                tools:layout_editor_absoluteY="50dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="103dp"
+                android:layout_height="99dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/grarm"
+                tools:layout_editor_absoluteX="22dp"
+                tools:layout_editor_absoluteY="117dp" />
+
+            <ImageView
+                android:id="@+id/heartImage"
+                android:layout_width="124dp"
+                android:layout_height="102dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="4"
+                android:background="@drawable/gheart"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="114dp" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="110dp"
+                android:layout_height="104dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/glarm"
+                tools:layout_editor_absoluteX="259dp"
+                tools:layout_editor_absoluteY="112dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="179dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="32dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/greenleg"
+            tools:layout_editor_absoluteX="89dp"
+            tools:layout_editor_absoluteY="236dp" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
