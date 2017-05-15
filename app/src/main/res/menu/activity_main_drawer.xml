@@ -2,35 +2,54 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
-    </group>
+        <item android:title="Physical Activities">
+            <menu>
+                <item
+                    android:id="@+id/jog"
+                    android:icon="@drawable/jogging"
+                    android:title="Jogging" />
+                <item
+                    android:id="@+id/bic"
+                    android:icon="@drawable/bicycle"
+                    android:title="Cycling" />
+                <item
+                    android:id="@+id/soc"
+                    android:icon="@drawable/soccer"
+                    android:title="Football" />
+            </menu>
+        </item>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
+        <item android:title="Social Activities">
+            <menu>
+                <item
+                    android:id="@+id/study"
+                    android:icon="@drawable/studying"
+                    android:title="Studying" />
+                <item
+                    android:id="@+id/film"
+                    android:icon="@drawable/film"
+                    android:title="Going to Cinema" />
+                <item
+                    android:id="@+id/music"
+                    android:icon="@drawable/headphone"
+                    android:title="Listening Music" />
+            </menu>
+        </item>
+
+        <item android:title="Regular Activities">
+            <menu>
+                <item
+                    android:id="@+id/eat"
+                    android:icon="@drawable/eating"
+                    android:title="Eating" />
+                <item
+                    android:id="@+id/sleep"
+                    android:icon="@drawable/sleeping"
+                    android:title="Sleeping "/>
+            </menu>
+        </item>
+
+
+    </group>
 
 </menu>

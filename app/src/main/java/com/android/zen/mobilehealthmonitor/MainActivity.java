@@ -1,28 +1,39 @@
 package com.android.zen.mobilehealthmonitor;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    ImageView head;
+    FloatingActionButton showStatus;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        head = (ImageView)findViewById(R.id.headImage);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -32,19 +43,59 @@ public class MainActivity extends AppCompatActivity
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();*/
 
-        Toast.makeText(MainActivity.this, "Betul erişebiliyor mu?",Toast.LENGTH_SHORT).show();
-         }
-    });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
+                showMaterialDialog();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+
+                head.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(MainActivity.this, "Canın Full Dostum", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(MainActivity.this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                drawer.setDrawerListener(toggle);
+                toggle.syncState();
+
+                NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+                navigationView.setNavigationItemSelectedListener(MainActivity.this);
+            }
+        });
     }
+
+    private void showMaterialDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.MyDialogTheme);
+        builder.setTitle(getString(R.string.dialog_title));
+        builder.setMessage(getString(R.string.dialog_message));
+        builder.setCancelable(false);
+
+
+        String positiveText = getString(android.R.string.ok);
+        builder.setPositiveButton(positiveText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // positive button logic
+                    }
+                });
+
+        String negativeText = getString(android.R.string.cancel);
+        builder.setNegativeButton(negativeText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // negative button logic
+                    }
+                });
+
+        AlertDialog dialog = builder.create();
+        // display dialog
+        dialog.show();
+    }
+
+
 
     @Override
     public void onBackPressed() {
@@ -84,22 +135,32 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
+        if (id == R.id.jog) {
 
-        } else if (id == R.id.nav_manage) {
+            Toast.makeText(MainActivity.this,"Jogging mi Yapmak İstiyorsun Bebeğim ...",Toast.LENGTH_SHORT).show();
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.bic) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.soc) {
+
+        } else if (id == R.id.study) {
+
+        } else if (id == R.id.film) {
+
+        } else if (id == R.id.music) {
+
+        } else if (id == R.id.eat) {
+
+        } else if (id == R.id.sleep) {
 
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }
+
+
