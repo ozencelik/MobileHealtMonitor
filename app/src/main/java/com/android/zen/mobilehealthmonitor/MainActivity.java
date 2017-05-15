@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity
 
                 showMaterialDialog();
 
-
+                Toast.makeText(MainActivity.this, "Betüüll", Toast.LENGTH_SHORT).show();
+                
                 head.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
