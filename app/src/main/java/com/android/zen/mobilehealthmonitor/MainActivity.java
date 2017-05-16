@@ -24,15 +24,15 @@ public class MainActivity extends AppCompatActivity
     FloatingActionButton showStatus;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
 
 
-        head = (ImageView)findViewById(R.id.headImage);
+            head = (ImageView)findViewById(R.id.headImage);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity
 
                 showMaterialDialog();
 
-                Toast.makeText(MainActivity.this, "Splash Screeni yapacağim...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Splash Screeni yapacağimm", Toast.LENGTH_SHORT).show();
 
                 head.setOnClickListener(new View.OnClickListener() {
                     @Override
