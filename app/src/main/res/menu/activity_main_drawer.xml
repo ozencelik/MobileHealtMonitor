@@ -48,8 +48,6 @@
                     android:title="Sleeping "/>
             </menu>
         </item>
-
-
     </group>
 
 </menu>
