@@ -11,7 +11,7 @@ import android.os.Handler;
 
 public class HomePage extends Activity {
 
-    private static int showtime = 2000;
+    private static int SHOW_TIME = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,6 @@ public class HomePage extends Activity {
                 startActivity(i);
                 finish();
             }
-        }, showtime);
+        }, SHOW_TIME);
     }
 }
