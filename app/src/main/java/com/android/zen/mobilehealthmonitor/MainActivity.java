@@ -561,24 +561,24 @@ public class MainActivity extends AppCompatActivity
         status = eyes.getStatus();
 
         if(status == 0){
-            leftEye.setImageResource(R.drawable.bordoeye1);
-            rightEye.setImageResource(R.drawable.bordoeye);
+            leftEye.setImageResource(R.drawable.bordoeye);
+            rightEye.setImageResource(R.drawable.bordoeye1);
         }
         else if(status == 1){
-            leftEye.setImageResource(R.drawable.redeye1);
-            rightEye.setImageResource(R.drawable.redeye);
+            leftEye.setImageResource(R.drawable.redeye);
+            rightEye.setImageResource(R.drawable.redeye1);
         }
         else if(status == 2){
-            leftEye.setImageResource(R.drawable.orangeeye1);
-            rightEye.setImageResource(R.drawable.orangeeye);
+            leftEye.setImageResource(R.drawable.orangeeye);
+            rightEye.setImageResource(R.drawable.orangeeye1);
         }
         else if(status == 3){
-            leftEye.setImageResource(R.drawable.yelloweye1);
-            rightEye.setImageResource(R.drawable.yelloweye);
+            leftEye.setImageResource(R.drawable.yelloweye);
+            rightEye.setImageResource(R.drawable.yelloweye1);
         }
         else if(status == 4){
-            leftEye.setImageResource(R.drawable.greeneye1);
-            rightEye.setImageResource(R.drawable.greeneye);
+            leftEye.setImageResource(R.drawable.greeneye);
+            rightEye.setImageResource(R.drawable.greeneye1);
         }
     }
 }

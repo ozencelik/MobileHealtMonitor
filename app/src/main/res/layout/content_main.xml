@@ -24,7 +24,8 @@
             android:layout_weight="0"
             android:gravity="center_horizontal"
             android:text="TextView"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            android:visibility="invisible" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:srcCompat="@drawable/greeneye"
                 tools:layout_editor_absoluteX="96dp"
                 tools:layout_editor_absoluteY="50dp" />
@@ -61,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:visibility="invisible"
+                android:visibility="visible"
                 app:srcCompat="@drawable/greeneye1"
                 tools:layout_editor_absoluteX="224dp"
                 tools:layout_editor_absoluteY="50dp" />
